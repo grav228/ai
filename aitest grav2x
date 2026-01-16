@@ -2693,12 +2693,6 @@ local TutorialSteps = {
         button = "Next →"
     },
     {
-        title = "Smart Features",
-        icon = "✨",
-        content = "<b><font color='#b464ff'>Intelligent Caching</font></b>\nGrav AI <b>learns</b> your phrases! After using \"make me fast\" once, it executes instantly next time.\n\n<b><font color='#b464ff'>Fuzzy Targeting</font></b>\nType partial names: <font color='#ff9128'>\"goto 1ql\"</font> finds \"1qlua\"\n\n<b><font color='#b464ff'>Predictions</font></b>\nAs you type, suggestions appear below the input box.",
-        button = "Next →"
-    },
-    {
         title = "Waypoints & Teleporting",
         icon = "📍",
         content = "<b>Save & Teleport to Locations:</b>\n\n<font color='#40e682'>swp [name]</font> - Save current spot\n<font color='#969696'>\"swp base\" saves your position as \"base\"</font>\n\n<font color='#40e682'>waypoint [name]</font> - Teleport to waypoint\n<font color='#969696'>\"waypoint base\" takes you back there</font>\n\n<font color='#40e682'>goto [player]</font> - Teleport to player\n<font color='#969696'>\"goto john\" teleports to player John</font>\n\n<font color='#ff9128'>Tip:</font> Type \"waypoint \" to see saved waypoints!",
@@ -4613,7 +4607,7 @@ local function switchMode(toChatMode)
         TweenService:Create(ChatModeContainer, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
         
         -- Update header for CHAT mode
-        ChatLogHeader.Text = "💬 grav ai chat"
+        ChatLogHeader.Text = "💬 1qlua ai chat"
         ChatLogHeader.TextColor3 = Colors.Blue
         
         -- Hide CMD-specific elements
