@@ -1,6 +1,6 @@
 --!nonstrict
 --[[ 
-    SMART INFINITE YIELD - V1.3.3 STABLE
+    Grav INFINITE YIELD - V1.3.3 STABLE
     - Architecture: Context Awareness + Event-Based Bridge
     - Logic: VolQ5 & Pollinations.AI (LLM Model)
     - Status: Stable 
@@ -336,8 +336,8 @@ end
 --- Get fallback colors
 function ThemeManager:getFallbackColors()
     return {
-        shade1 = Color3.fromRGB(36, 36, 37),
-        shade2 = Color3.fromRGB(46, 46, 47),
+        shade1 = Color3.fromRGB(51, 0, 255),
+        shade2 = Color3.fromRGB(51, 0, 255),
         text = Color3.fromRGB(255, 255, 255)
     }
 end
@@ -386,7 +386,7 @@ end
 --- @param color Color3?
 --- @return function -- Cleanup function
 function AnimationManager:createPulsingGlow(element, color)
-    local glowColor = color or Color3.fromRGB(100, 200, 255)
+    local glowColor = color or Color3.fromRGB(51, 0, 255)
     
     local glow = Instance.new("UIStroke")
     glow.Name = "SIY_Highlight"
@@ -420,8 +420,8 @@ local _tourElements = {}
 local _activeHighlights = {}
 
 local _tourSteps = {
-    {target = "InputBox", title = "Welcome! 🎉", message = "Type natural language here"},
-    {target = "ModeToggle", title = "AI Mode", message = "Toggle AI (🤖) / Manual (⌨️)"},
+    {target = "InputBox", title = "Hi", message = "Type natural language here"},
+    {target = "ModeToggle", title = "Mode", message = "Toggle AI  / Manual "},
     {target = "QuickActions", title = "Quick Actions", message = "Tap for instant commands"}
 }
 
@@ -899,9 +899,9 @@ AI: ;goto bob
 local SoundManager = {}
 local _activeSounds = {}
 local _soundIds = {
-    Success = "rbxassetid://18913929246",
-    Error = "rbxassetid://9063125154",
-    Processing = "rbxassetid://6073491164"
+    Success = nil,
+    Error = nil,
+    Processing = nil
 }
 
 --- Play a sound effect
