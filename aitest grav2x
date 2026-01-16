@@ -2669,15 +2669,15 @@ local CurrentStep = 1
 -- Tutorial content for each step
 local TutorialSteps = {
     {
-        title = "Welcome to Smart IY",
+        title = "Welcome to Grav AI",
         icon = "👋",
-        content = "<b>Smart Infinite Yield</b> is an AI-powered admin script that understands <font color='#40e682'>natural language</font>.\n\nInstead of memorizing commands, just tell it what you want in plain English!\n\n<font color='#969696'>Example: Type \"make me fly\" instead of \"fly\"</font>",
+        content = "<b>Grav Infinite Yield</b> is an AI-powered admin script that understands <font color='#40e682'>natural language</font>.\n\nInstead of memorizing commands, just tell it what you want in plain English!\n\n<font color='#969696'>Example: Type \"make me fly\" instead of \"fly\"</font>",
         button = "Next →"
     },
     {
         title = "What It Does",
         icon = "🧠",
-        content = "<b>Smart IY translates your words into commands:</b>\n\n<font color='#ff9128'>\"Make me fly\"</font> → <font color='#40e682'>;fly</font>\n\n<font color='#ff9128'>\"Make me super fast\"</font> → <font color='#40e682'>;speed 100</font>\n\n<font color='#ff9128'>\"Teleport to that player\"</font> → <font color='#40e682'>;goto PlayerName</font>\n\nIt even figures out <b>which player</b> you mean!",
+        content = "<b>Grav AI translates your words into commands:</b>\n\n<font color='#ff9128'>\"Make me fly\"</font> → <font color='#40e682'>;fly</font>\n\n<font color='#ff9128'>\"Make me super fast\"</font> → <font color='#40e682'>;speed 100</font>\n\n<font color='#ff9128'>\"Teleport to that player\"</font> → <font color='#40e682'>;goto PlayerName</font>\n\nIt even figures out <b>which player</b> you mean!",
         button = "Next →"
     },
     {
@@ -2719,7 +2719,7 @@ local TutorialSteps = {
     {
         title = "You're Ready!",
         icon = "🚀",
-        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by VolQ5</font>",
+        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by Grav2x</font>",
         button = "Let's Go!"
     }
 }
@@ -2931,7 +2931,7 @@ local function completeTutorial()
     
     -- Welcome message after tutorial
     task.delay(0.5, function()
-        StatusLabel.Text = ">> Welcome! Type anything to get started"
+        StatusLabel.Text = ">> Welcome! Type anything to get start"
         StatusLabel.TextColor3 = Colors.Green
         StatusLabel.TextTransparency = 0
         TweenService:Create(StatusLabel, TweenInfo.new(4, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 0.6}):Play()
@@ -4613,7 +4613,7 @@ local function switchMode(toChatMode)
         TweenService:Create(ChatModeContainer, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
         
         -- Update header for CHAT mode
-        ChatLogHeader.Text = "💬 Conversation"
+        ChatLogHeader.Text = "💬 grav ai chat"
         ChatLogHeader.TextColor3 = Colors.Blue
         
         -- Hide CMD-specific elements
