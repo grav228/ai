@@ -2713,7 +2713,7 @@ local TutorialSteps = {
     {
         title = "You're Ready!",
         icon = "🚀",
-        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by VolQ5</font>",
+        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by Grav2x and MANGARIN</font>",
         button = "Yay"
     }
 }
