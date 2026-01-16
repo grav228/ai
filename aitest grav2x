@@ -1,6 +1,6 @@
 --!nonstrict
 --[[ 
-    Grav INFINITE YIELD - V1.3.3 STABLE
+    SMART INFINITE YIELD - V1.3.3 STABLE
     - Architecture: Context Awareness + Event-Based Bridge
     - Logic: VolQ5 & Pollinations.AI (LLM Model)
     - Status: Stable 
@@ -336,8 +336,8 @@ end
 --- Get fallback colors
 function ThemeManager:getFallbackColors()
     return {
-        shade1 = Color3.fromRGB(51, 0, 255),
-        shade2 = Color3.fromRGB(51, 0, 255),
+        shade1 = Color3.fromRGB(36, 36, 37),
+        shade2 = Color3.fromRGB(46, 46, 47),
         text = Color3.fromRGB(255, 255, 255)
     }
 end
@@ -386,7 +386,7 @@ end
 --- @param color Color3?
 --- @return function -- Cleanup function
 function AnimationManager:createPulsingGlow(element, color)
-    local glowColor = color or Color3.fromRGB(51, 0, 255)
+    local glowColor = color or Color3.fromRGB(100, 200, 255)
     
     local glow = Instance.new("UIStroke")
     glow.Name = "SIY_Highlight"
@@ -420,8 +420,8 @@ local _tourElements = {}
 local _activeHighlights = {}
 
 local _tourSteps = {
-    {target = "InputBox", title = "Hi", message = "Type natural language here"},
-    {target = "ModeToggle", title = "Mode", message = "Toggle AI  / Manual "},
+    {target = "InputBox", title = "Welcome! 🎉", message = "Type natural language here"},
+    {target = "ModeToggle", title = "AI Mode", message = "Toggle AI (🤖) / Manual (⌨️)"},
     {target = "QuickActions", title = "Quick Actions", message = "Tap for instant commands"}
 }
 
@@ -899,9 +899,9 @@ AI: ;goto bob
 local SoundManager = {}
 local _activeSounds = {}
 local _soundIds = {
-    Success = nil,
-    Error = nil,
-    Processing = nil
+    Success = "rbxassetid://18913929246",
+    Error = "rbxassetid://9063125154",
+    Processing = "rbxassetid://6073491164"
 }
 
 --- Play a sound effect
@@ -2695,7 +2695,7 @@ local TutorialSteps = {
     {
         title = "Smart Features",
         icon = "✨",
-        content = "<b><font color='#b464ff'>Intelligent Caching</font></b>\nGrav AI <b>learns</b> your phrases! After using \"make me fast\" once, it executes instantly next time.\n\n<b><font color='#b464ff'>Fuzzy Targeting</font></b>\nType partial names: <font color='#ff9128'>\"goto 1QL\"</font> finds \"1QLUA\"\n\n<b><font color='#b464ff'>Predictions</font></b>\nAs you type, suggestions appear below the input box.",
+        content = "<b><font color='#b464ff'>Intelligent Caching</font></b>\nGrav AI <b>learns</b> your phrases! After using \"make me fast\" once, it executes instantly next time.\n\n<b><font color='#b464ff'>Fuzzy Targeting</font></b>\nType partial names: <font color='#ff9128'>\"goto 1ql\"</font> finds \"1qlua\"\n\n<b><font color='#b464ff'>Predictions</font></b>\nAs you type, suggestions appear below the input box.",
         button = "Next →"
     },
     {
@@ -2719,8 +2719,8 @@ local TutorialSteps = {
     {
         title = "You're Ready!",
         icon = "🚀",
-        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by Grav2x</font>",
-        button = "Let's Go!"
+        content = "<b>You now know everything to get started!</b>\n\n<font color='#b464ff'>Quick Reference:</font>\n• Type naturally - AI understands you\n• <font color='#ff9128'>CMD</font> = Execute | <font color='#32b4ff'>CHAT</font> = Ask\n• <font color='#40e682'>Right Shift</font> = Toggle menu\n• <font color='#40e682'>clearcache</font> = Reset learned commands\n\n<font color='#969696'>Made with ❤️ by VolQ5</font>",
+        button = "Yay"
     }
 }
 
@@ -2931,7 +2931,7 @@ local function completeTutorial()
     
     -- Welcome message after tutorial
     task.delay(0.5, function()
-        StatusLabel.Text = ">> Welcome! Type anything to get start"
+        StatusLabel.Text = ">> Welcome! Type anything to get started"
         StatusLabel.TextColor3 = Colors.Green
         StatusLabel.TextTransparency = 0
         TweenService:Create(StatusLabel, TweenInfo.new(4, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 0.6}):Play()
